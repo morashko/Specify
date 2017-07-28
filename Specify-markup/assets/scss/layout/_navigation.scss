@@ -1,0 +1,73 @@
+// sidebar nav
+.sidebar-nav {
+  position: relative;
+  z-index: 1;
+  color: $black;
+
+  li {
+    &:first-child {
+      font-weight: bold;
+    }
+
+    &.active {
+      background: #fff;
+    }
+  }
+
+  a {
+    color: inherit;
+    display: block;
+    padding: 12px 10px 11px 16px;
+
+    &:hover {
+      background: rgba(#fff, 0.5);
+    }
+  }
+
+  .indicator {
+    margin-right: 9px;
+    margin-top: -3px;
+    vertical-align: middle;
+  }
+}
+
+
+
+// top bar nav
+.nav {
+  font-size: 16px;
+
+  .top-bar & {
+    float: left;
+    margin: 23px 0 0 0;
+  }
+
+  li {
+    display: inline-block;
+    line-height: 23px;
+    padding: 0 29px;
+    color: $black;
+  }
+
+  li + li {
+    border-left: 1px solid $border-color;
+  }
+
+  i {
+    font-size: 12px;
+    margin-right: 8px;
+    color: #ccc;
+  }
+
+  a {
+    color: #999;
+    display: inline-block;
+  }
+
+  .active a,
+  .active i,
+  a:hover,
+  a:hover i {
+    color: $black;
+  }
+}

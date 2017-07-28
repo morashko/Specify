@@ -1,0 +1,27 @@
+.tooltip {
+  background: $black;
+  color: #fff;
+  font-size: 12px;
+  position: relative;
+  padding: 6px 10px;
+
+  &::before {
+    content: '';
+    position: absolute;
+  }
+
+  &.arrow-left::before {
+    @include triangle(10px 6px, $black, left);
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+  }
+
+  .is-error & {
+    background: $error;
+
+    &.arrow-left::before {
+      border-right-color: $error;
+    }
+  }
+}

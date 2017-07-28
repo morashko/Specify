@@ -1,0 +1,68 @@
+// $mq-breakpoints: (
+//     // Base device classes
+//     mobile:      320px,
+//     tablet:      640px,
+//     desktop:    1024px,
+//     widescreen: 1200px,
+//     tvscreen:   1920px,
+
+//     // Tweakpoints
+//     mobileLandscape: 480px
+// );
+
+$mq-breakpoints: (
+    mobile:  320px,
+    tablet:  740px,
+    desktop: 980px,
+    wide:    1300px,
+
+    mobileLandscape: 480px
+);
+
+
+
+
+// Show active breakpoint in top right corner of viewport
+//$mq-show-breakpoints: (mobile, mobileLandscape, tablet, desktop, wide);
+
+@import "vendors/font-faces";
+@import "vendors/mq";
+@import "vendors/normalize";
+@import "vendors/icomoon";
+//@import "vendors/fancybox";
+
+@import 'base/variables';
+@import 'base/functions';
+@import 'base/mixins';
+@import 'base/helpers';
+@import 'base/reset';
+@import 'base/typography';
+
+@import 'layout/common';
+@import "layout/header";
+@import "layout/sidebar";
+@import 'layout/navigation';
+//@import "layout/grid";
+//@import "layout/footer";
+// @import 'layout/mobile-nav';
+
+
+@import 'components/forms';
+@import 'components/buttons';
+@import 'components/tooltips';
+@import 'components/header-select';
+@import 'components/create-project';
+@import 'components/top-bar-controls';
+@import 'components/timeline';
+@import 'components/entry-form';
+
+
+
+//@import 'components/gallery';
+//@import 'components/carousel';
+
+
+@import 'pages/dashboard';
+@import 'pages/login';
+@import 'pages/design-screen';
+

@@ -1,0 +1,47 @@
+.center-button {
+  text-align: center;
+  margin: 60px 0;
+}
+
+.btn {
+  display: inline-block;
+  background: $brand-primary;
+  color: $black;
+  //font-weight: bold;
+  text-align: center;
+  border: 0;
+
+  &:hover {
+    background: lighten($brand-primary, 8%);
+  }
+
+  &.btn-lg {
+    font-size: 20px;
+    padding: 20px 100px;
+  }
+
+  &.btn-secondary {
+    background: $brand-secondary;
+    font-size: 20px;
+    color: #fff;
+    padding: 13px 34px;
+
+    &:hover {
+      background: darken($brand-secondary, 8%);
+    }
+  }
+
+  &.btn-upload {
+    background: $blue;
+    font-size: 16px;
+    color: #fff;
+    padding: 0;
+    width: 50px;
+    line-height: 50px;
+
+    i {
+      color: darken($blue, 15%);
+    }
+  }
+}
+

@@ -1,0 +1,54 @@
+$gray: #999;
+$black: #272829;
+$lightblue: #4a9aff;
+$blue: #2383e4;
+$yellow: #f3d700;
+$red: #f30;
+
+$border-color: #c9cbce;
+$border-color-dark: #313137;
+
+$header-bg: #383940;
+
+$brand-primary: $yellow;
+$brand-secondary: $lightblue;
+$error: $red;
+
+$base-link-color: $brand-primary;
+$base-font-sans-serif: 'Conv_AvenirNextCyr', Arial, "Helvetica Neue", Helvetica, sans-serif;
+$base-font-serif: "Times New Roman", Times, Baskerville, Georgia, serif;
+
+// body
+$base-text-color: #333;
+$base-background-color: #fff;
+$base-font-size: 14px;
+$base-line-height: 1.2;
+$base-font-family: $base-font-sans-serif;
+
+$base-min-width: 998px;
+
+// buttons 
+$btn-color: inherit;
+$btn-background: $gray;
+$btn-padding: 0.4em 0.7em;
+$btn-font-size: inherit;
+
+// forms
+$form-element-padding: $btn-padding;
+$form-element-border-color: $gray;
+$form-element-focus-border-color: $black;
+$placeholder-color: $gray;
+
+// headers
+$h1-font-size: 30px;
+$h2-font-size: 27px;
+$h3-font-size: 24px;
+$h4-font-size: 21px;
+$h5-font-size: 17px;
+$h6-font-size: 15px;
+
+
+// mobile nav
+$mobile-nav-width: 210px;
+$easing: cubic-bezier(.32,.01,.46,1.37);
+$move-speed: 0.4s;

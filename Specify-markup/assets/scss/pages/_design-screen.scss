@@ -1,0 +1,111 @@
+
+.design-screen {
+  text-align: center;
+
+  .img-holder {
+    text-align: left;
+    display: inline-block;
+    position: relative;
+    // border: 1px solid #f00;
+    // margin: 0 auto;
+  }
+
+  img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    // display: block;
+    // max-width: none;
+  }
+
+
+  .d-s-overlay {
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background: rgba(black, 0.5);
+    z-index: 1;
+  }
+
+  .d-s-pin-area {
+    position: absolute;
+    z-index: 2;
+    background: rgba(white, 0.65);
+  }
+
+  .d-s-pin {
+    position: absolute;
+    z-index: 3;
+    border-radius: 50%;
+    background: rgba(#f33, 0.15);
+    padding: 10px;
+    color: #fff;
+
+    b {
+      display: inline-block;
+      border-radius: 50%;
+      width: 32px;
+      line-height: 32px;
+      text-align: center;
+      background: rgba(#f33, 1);
+    }
+  }
+}
+
+
+
+
+.d-s-form {
+  position: absolute;
+  background: #fff;
+  left:0;
+  width: 100%;
+  z-index: 5;
+  padding: 30px;
+  box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.2);
+
+  .icon-attach {
+    color: $brand-secondary;
+  }
+
+
+  .arrow {
+    position: absolute;
+    bottom: 100%;
+    margin-left: -21px;
+
+    @include triangle(42px, #fff, up);
+  }
+}
+
+.d-s-form-panel {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 100%;
+  width: 31px;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 16px;
+
+  .controls {
+    position: absolute;
+    width: 100%;
+    
+    li {
+      margin-bottom: 13px;
+    }
+
+    &.top {
+      top: 13px;
+    }
+
+    &.bottom {
+      bottom: 0;
+
+    }
+  }
+}

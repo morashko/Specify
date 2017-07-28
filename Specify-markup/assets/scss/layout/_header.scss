@@ -1,0 +1,183 @@
+$header-select-height: 50px;
+
+.header {
+  background: $header-bg;
+  color: #fff;
+  min-width: $base-min-width;
+  z-index: 99;
+}
+
+.brand {
+  position: absolute;
+  left:0;
+  top:0;
+  margin: 17px 0 0 28px;
+}
+
+.header-center {
+  width: 666px;
+  /*position: absolute;
+  top: 10px;
+  left: 50%;
+  margin-left: -333px;*/
+  margin: 10px auto;
+  //transform: translateX(-50%);
+}
+
+
+// search
+.header-search {
+  float: left;
+  width: 57px;
+  text-align: center;
+  line-height: 50px;
+  position: relative;
+
+  .search-opener {
+    color: #83858f;
+
+    i {
+      font-size: 20px;
+      vertical-align: middle;
+    }
+  }
+
+  input[type='search'] {
+    border-radius: 0;
+    border: 0;
+    width: 100%;
+    padding: 13px 53px;
+    height: 50px;
+    font-size: 20px;
+    box-sizing: border-box;
+    color: $black;
+    font-weight: 300;
+
+    outline: none;
+
+    @include placeholder() {
+      color: $black;
+    }
+  }
+
+  fieldset {
+    display: none;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 666px;
+    z-index: 10;
+  }
+
+
+
+  &.is-active,
+  &:hover {
+    fieldset {
+      display: block;
+    }
+   .search-opener {
+     color: $black;
+     position: relative;
+     z-index: 11;
+    }
+  }
+}
+
+
+
+
+
+
+
+// header right items 
+.tools {
+  position: absolute;
+  right:0;
+  top:0;
+  margin-top: 10px;
+  margin-right: 21px;
+}
+
+.user-block {
+  float: left;
+  position: relative;
+  margin-right: 11px;
+
+  > .ava {
+    float: left;
+    margin-right: 10px;
+  }
+
+  .person {
+    float: left;
+    
+    margin-top: 10px;
+    line-height: 30px;
+    color: #83858f;
+    font-size: 14px;
+    border-right: 1px solid #474850;
+    padding-right: 19px;
+  }
+
+  .opener-user-drop {
+    color: inherit;
+
+    &::after {
+      content:'';
+      display: inline-block;
+      vertical-align: middle;
+      @include triangle(6px, #83858f, down);
+      margin-left: 5px;
+    }
+  }
+}
+
+
+// header user dropdown
+.user-dropdown {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 205px;
+  text-align: center;
+  padding: 30px 20px;
+
+  .person-nickname {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 4px 0 6px;
+  }
+
+  .person-email {
+    font-size: 12px;
+    color: #83858f;
+  }
+
+  &::before {
+    right: 49px;
+  }
+}
+
+
+
+// notification-block
+.notification-block {
+  float: left;
+  width: 35px;
+  text-align: center;
+  margin-top: 18px;
+  position: relative;
+
+  .notification-qnt {
+    display: inline-block;
+    padding: 0 5px;
+    min-width: 17px;
+    line-height: 17px;
+    font-size: 12px;
+    color: #83858f;
+    background: $black;
+  }
+}

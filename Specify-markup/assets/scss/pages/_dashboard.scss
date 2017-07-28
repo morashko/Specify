@@ -1,0 +1,133 @@
+.dashboard {
+  width: 100%;
+  margin-top: -$top-bar-height;
+  border-collapse: collapse;
+  table-layout: fixed;
+
+
+  th {
+    background: #fff;
+    height: 70px;
+    position: relative;
+    font-weight: normal;
+    //font-size: 14px;
+    color: #999;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      top: 70px;
+      left: 0;
+      right: 0;
+      height: 26px;
+      @extend %shadow;
+    }
+
+    span {
+      white-space: nowrap;
+
+      &::after {
+        opacity: 0;
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: -2px;
+        margin-left: 5px;
+        transform: rotate(0);
+        transition: transform 0.3s ease;
+        @include triangle(8px, $black, down);
+        transform-origin: 50% 50%;
+      }
+    }
+
+    &.ask,
+    &.desk {
+      color: $black;
+      span::after {
+        opacity: 1;
+      }
+    }
+    
+    &.ask {
+      span::after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .col-name {
+    text-align: left;
+    padding-left: 38px;
+    padding-right: 20px;
+    width: 30%;
+  }
+
+  .col-date {
+    text-align: left;
+    padding-right: 10px;
+    width: 12%;
+  }
+
+  .col-screens {
+    vertical-align: bottom;
+    text-align: center;
+    width: 320px;
+  }
+
+  .col-pages,
+  .col-duration {
+    width: 15%;
+    text-align: center;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  td {
+    padding: 0;
+    position: relative;
+    z-index: 1;
+    height: 169px;
+    vertical-align: middle;
+    //font-size: 14px;
+    border-bottom: 1px solid #e2e3e4;
+    transition: all 0.3s ease;
+
+    &.col-name {
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+
+  .edit-controls {
+    display: none;
+  }
+
+  .name {
+    max-width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    white-space: normal;
+  }
+
+  tbody {
+    tr:hover {
+      .edit-controls {
+        display: inline-block;
+      }
+      td {
+        background: $brand-secondary;
+        color: #fff;
+      }
+
+      .page-screens {
+        opacity: 0.65;
+      }
+
+      .name {
+        white-space: nowrap;
+        max-width: 75%;
+      }
+    }
+  }
+}

@@ -1,0 +1,236 @@
+.is-timeline {
+  .timeline {
+    display: block;
+  }
+
+  .top-bar {
+    .timeline-opener-block {
+      display: none;
+    }
+  }
+}
+
+.timeline-bar {
+  @extend %clearfix;
+  height: $top-bar-height;
+  border-bottom: 1px solid $border-color-dark;
+}
+
+// add checkpoint button
+.add-checkpoint-block {
+  float: right;
+  width: 60px;
+  height: $top-bar-height;
+  text-align: center;
+  
+  position: relative;
+
+  > a {
+    display: block;
+    font-size: 20px;
+    line-height: $top-bar-height;
+    color: $brand-primary;
+  }
+
+  &:hover,
+  &.is-active {
+    a {
+      background: #fff;
+      color: $black;
+      z-index: 91;
+      position: relative;
+    }
+
+    .popup-add-checkpoint {
+      display: block;
+    }
+  }
+}
+
+.popup-add-checkpoint {
+  display: none;
+  background: #fff;
+  position: absolute;
+  top: 70px;
+  right:0;
+  width: $timeline-width;
+  z-index: 90;
+  text-align: left;
+  padding: 10px;
+  box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.48);
+
+
+  input[type='text'],
+  textarea {
+    width: 100%;
+    color: $black;
+    padding: 10px 8px;
+  }
+
+  textarea {
+    height: 70px;
+    resize: none;
+  }
+
+  .btn {
+    width: 100%;
+    height: 35px;
+  }
+
+  .r + .r {
+    margin-top: 10px;
+  }
+}
+
+
+.timeline-period {
+  position: relative;
+  margin: 20px;
+
+  &::after {
+    content: '';
+    width: 2px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 10px;
+    background: $border-color-dark;
+  }
+}
+
+.timeline-checkpoint {
+  min-height: 128px;
+  padding: 0 15px 10px 0;
+  font-size: 12px;
+  position: relative;
+
+  &:first-child {
+    &::after {
+      content: '';
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      position: absolute;
+      top:0;
+      right:4px;
+      z-index: 10;
+      background: #fff;
+      border: 4px solid $black;
+      box-shadow: 0 0 0 2px $border-color-dark;
+    }
+  }
+
+  &:last-child {
+    min-height: 0;
+    padding-bottom: 0;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left:0;
+    right: 12px;
+    height: 1px;
+    background: $border-color-dark;
+    z-index: 0;
+  }
+
+  .timeline-point {
+    //content: "\e60b";
+    color: #fff;
+    position: absolute;
+    top: 2px;
+    right: 4px;
+    border: 2px solid $black;
+    line-height: 8px;
+    font-size: 11px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    z-index: 20;
+
+    i.icon-timeline-point {
+      color: $brand-primary;
+    }
+
+    &:hover {
+      .t-t {
+        display: block;
+      }
+    }
+
+    > i {
+      font-size: 9px;
+    }
+
+  }
+
+  time {
+    display: inline-block;
+    margin-bottom: 4px;
+    padding-right: 4px;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    background: $black;
+  }
+
+  p {
+    color: #686971;
+    line-height: 16px;
+  }
+}
+
+.t-t {
+  display: none;
+  position: absolute;
+  top: 4px;
+  right: 7px;
+  padding: 20px 18px 0 0;
+  background: url(../images/bg-t-t-corner.png) no-repeat 100% 6px;
+}
+
+.t-t-bg {
+  width: 190px;
+  background: rgba(black, 0.902);
+  box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.8);
+  padding: 5px;
+  color: #fff;
+  p {
+    font-size: 12px;
+    color: #fff;
+  }
+}
+
+.t-t-body {
+  padding: 11px;
+}
+
+.t-t-footer {
+  border-top: 1px solid #313133;
+  display: table;
+  width: 100%;
+
+  a {
+    height: 23px;
+    display: table-cell;
+    width: 50%;
+    vertical-align: bottom;
+    text-align: center;
+    color: #696b73;
+    padding-bottom: 2px;
+
+    i {
+      font-size: 14px;
+    }
+
+    &:hover {
+      color: #fff;
+    }
+  }
+  a + a {
+    border-left: 1px solid #313133;
+
+  }
+}

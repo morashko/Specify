@@ -1,0 +1,135 @@
+// create project
+.create-project {
+  float: left;
+  margin: 0 0 0 11px;
+
+  
+  // remove 
+  &:hover {
+    .popup-create-project {
+      display: block;
+    }
+
+    .opener-create-project {
+      background: $brand-primary;
+      color: $black;
+      border-color: $brand-primary;
+
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+
+}
+
+.opener-create-project {
+  display: inline-block;
+  vertical-align: top;
+  border: 2px solid $black;
+  width: 50px;
+  height: $header-select-height;
+  text-align: center;
+  color: #fff;
+  position: relative;
+
+  &::after {
+    content:'';
+    opacity: 0;
+    background: $brand-primary;
+    height: 12px;
+    position: absolute;
+    top: 100%;
+    left: -2px;
+    right: -2px;
+  }
+
+  i {
+    line-height: $header-select-height - 4;
+    font-size: 21px;
+    vertical-align: top;
+  }
+
+  .is-active &,
+  &:hover {
+    background: $brand-primary;
+    color: $black;
+    border-color: $brand-primary;
+
+    &::after {
+      opacity: 1;
+    }
+  }
+}
+
+
+.popup-create-project {
+  display: none;
+  position: absolute;
+  top: 70px;
+  min-height: calc(100vh - 70px);
+  left: 0;
+  //bottom: 0;
+  width: 100%;
+  border-top: 11px solid $brand-primary;
+  background: #fff;
+  color: #9b9ca0;
+  text-align: center;
+  z-index: 90;
+
+  padding: 60px 0;
+
+  .is-active & {
+    display: block;
+  }
+
+
+  .close {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+  }
+
+}
+
+.create-project-form {
+  max-width: 552px;
+  margin: 0 auto;
+
+  input[type='text'] {
+    display: block;
+    width: 100%;
+    font-size: 26px;
+    margin-bottom: 50px;
+    color: $black;
+
+    @include placeholder {
+      color: #d5d7df;
+    }
+  }
+
+
+  .btn-lg {
+    width: 100%;
+  }
+}
+
+
+.drag-files {
+  height: 370px;
+  border-radius: 16px;
+  border: 2px dashed $border-color;
+  margin-bottom: 50px;
+  background: url(../images/drad-and-drop.svg) no-repeat 50% 50%;
+
+  header {
+    margin-top: -0.70em;
+    position: relative;
+  }
+
+  .legend {
+    display: inline-block;
+    background: #fff;
+    padding: 0 18px;
+  }
+}

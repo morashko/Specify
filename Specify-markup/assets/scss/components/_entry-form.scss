@@ -1,0 +1,74 @@
+.entry-form {
+  .r {
+    margin-left: -10px;
+    margin-right: -10px;
+
+    & + .r {
+      margin-top: 20px;
+    }
+  }
+
+  .input-holder {
+    float: left;
+    padding: 0 10px;
+
+    input,
+    select {
+      width: 100%;
+    }
+
+    &.col-title {
+      width: 36%;
+    }
+
+    &.col-duration {
+      width: 14%;
+    }
+
+    &.col-spec {
+      width: 24.5%;
+    }
+
+    &.col-status {
+      width: 25.5%;
+    }
+  }
+
+  .textarea-holder {
+    margin: 0 10px;
+  }
+}
+
+
+.textarea-holder {
+  border: 2px solid $border-color;
+
+  textarea {
+    border: 0;
+    width: 100%;
+    height: 105px;
+    min-height: 50px;
+  }
+}
+
+.textarea-bar {
+  background: #f4f5f5;
+  font-size: 12px;
+  padding: 12px 20px;
+
+  a {
+    color: $brand-secondary;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .new-attach {
+    float: right;
+  }
+
+  .attaches {
+    float: left;
+  }
+}
