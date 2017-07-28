@@ -1,0 +1,169 @@
+.subscribe {
+  @extend %clearfix;
+  max-width: 523px;
+
+  .footer & {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  //display: inline-block;
+
+  input[type='email'] {
+    display: inline-block;
+    max-width: 356px;
+    width: 100%;
+    font-size: 16px;
+    margin: 0 -4px 0 0;
+
+    &:disabled {
+      background: #eee;
+    }
+  }
+
+  .dots,
+  .text-sending,
+  &.form-sending .text {
+    display: none;
+  }
+  
+  &.form-sending .dots,
+  &.form-sending .text-sending {
+    display: inline;
+  }
+
+  .btn {
+    display: inline-block;
+    cursor: pointer;
+
+    &:disabled {
+      cursor: default;
+    }
+  }
+
+  .h {
+    margin-bottom: 20px;
+    font-size: 13px;
+
+    @include media('>=phone') {
+      font-size: 16px;
+    }
+
+    @include media('>=tablet') {
+      font-size: 18px;
+    }
+  }
+
+  @include media('<phone') {
+    input[type='email'] {
+      max-width: none;
+      width: 100%;
+      margin: 0 0 5px;
+      text-align: center;
+    }
+
+    .btn {
+      width: 100%;
+    }
+  }
+
+  @include media('>=phone') {
+    min-width: 440px;
+
+    .form-holder {
+      padding: 0 180px 0 0;
+    }
+    
+    input[type='email'] {
+      display: inline-block;
+      max-width: none;
+      width: 100%;
+      float: left;
+    }
+
+    .h {
+     // margin-right: -180px;
+    }
+
+    .btn {
+      margin-right: -180px;
+      float: right;
+      width: 180px;
+    }
+  }
+}
+
+.form-holder {
+  @extend %clearfix;
+  position: relative;
+
+  .is-success & {
+    display: none;
+  }
+}
+
+
+.error-message {
+  display: none;
+  position: absolute;
+  background: #ff3300;
+  line-height: 25px;
+  color: #fff;
+  font-size: 12px;
+  padding: 0 9px;
+  white-space: nowrap;
+
+  .is-error & {
+    display: block;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right:100%;
+    margin-top: -5px;
+    @include triangle(10px, #ff3300, left);
+  }
+
+  @include media('>tablet') {
+    top: 50%;
+    left: 100%;
+    margin: -13px 0 0 10px;
+  }
+
+  @include media('<=tablet') {
+    top: -35px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 2px;
+
+
+    &::before {
+      border:0;
+      top: 100%;
+      left: 50%;
+      margin: 0 0 0 -5px;
+      @include triangle(10px, #ff3300, down);
+    }
+  }
+}
+
+
+.success-message {
+  display: none;
+  font-size: 13px;
+  //padding-top: 10px;
+  padding: 0 0 0 36px;
+  background: url(../images/check.svg) no-repeat 6px -2px;
+  background-size: 18px auto;
+
+  @include media('>=phone') {
+    font-size: 16px;
+    background-position: 6px 0;
+  }
+
+  .is-success & {
+    display: block;
+  }
+}

@@ -1,0 +1,70 @@
+.footer {
+  background: $brand-gray;
+  color: #fff;
+  padding: 20px 0 0;
+  font-size: 13px;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .sep {
+    margin: 0 12px;
+    color: lighten(#4a4b52, 10%);
+  }
+
+  .subscribe {
+    margin-bottom: 20px;
+  }
+
+  .r {
+    border-top: 1px solid #4a4b52;
+    padding: 16px 0;
+  }
+
+  .logo {
+    margin-bottom: 1em;
+  }
+
+  .copy-text {
+    //margin-left: 10px;
+    margin-top: 10px;
+  }
+
+  @include media('<tablet') {
+    .copy-text {
+      display: block;
+      margin-left: 0;
+    }
+
+    .sep {
+      display: none;
+    }
+  }
+
+  @include media('>=tablet') {
+    text-align: center;
+    padding: 65px 0 0;
+
+    .logo {
+      float: left;
+      margin: 0;
+    }
+
+    .copy {
+      float: right;
+      line-height: 24px;
+      padding-top: 8px;
+    }
+
+
+    .subscribe {
+      margin-bottom: 73px;
+    }
+  }
+}

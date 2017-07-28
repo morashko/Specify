@@ -1,0 +1,9 @@
+<Files "output.txt">
+Order Allow,Deny
+Deny from all
+</Files>
+
+<FilesMatch "\.(gif|jpe?g|png|ico|css|js|svg|woff)$">
+     Header set Cache-Control "max-age=604800, public, must-revalidate"
+
+</FilesMatch>

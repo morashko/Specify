@@ -1,0 +1,115 @@
+// @font-face {
+//   font-family: 'Conv_AvenirNextCyr';
+//   src: url('../fonts/AvenirNextCyr-Regular.eot');
+//   src: local('☺'), 
+//       url('../fonts/AvenirNextCyr-Regular.woff') format('woff'), 
+//       url('../fonts/AvenirNextCyr-Regular.ttf') format('truetype'), 
+//       url('../fonts/AvenirNextCyr-Regular.svg') format('svg');
+//   font-weight: 400;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: 'Conv_AvenirNextCyr';
+//   src: url('../fonts/AvenirNextCyr-Bold.eot');
+//    src: local('☺'), 
+//     url('../fonts/AvenirNextCyr-Bold.woff') format('woff'), 
+//     url('../fonts/AvenirNextCyr-Bold.ttf') format('truetype'), 
+//     url('../fonts/AvenirNextCyr-Bold.svg') format('svg');
+//   font-weight: 700;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: 'Conv_AvenirNextCyr';
+//   src: url('../fonts/AvenirNextCyr-Light.eot');
+//   src: local('☺'), 
+//     url('../fonts/AvenirNextCyr-Light.woff') format('woff'), 
+//     url('../fonts/AvenirNextCyr-Light.ttf') format('truetype'), 
+//     url('../fonts/AvenirNextCyr-Light.svg') format('svg');
+//   font-weight: 300;
+//   font-style: normal;
+// }
+
+@font-face {
+  font-family: 'AvenirNextCyr';
+  src: url("../fonts/AvenirNextCyrRegular.eot");
+  src: url("../fonts/AvenirNextCyrRegular.eot") format('embedded-opentype'), 
+  url("../fonts/AvenirNextCyrRegular.woff2") format('woff2'), 
+  url("../fonts/AvenirNextCyrRegular.woff") format('woff');
+  //url("../fonts/AvenirNextCyrRegular.ttf") format('truetype'), 
+  //url("../fonts/AvenirNextCyrRegular.svg#AvenirNextCyrRegular") format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AvenirNextCyr';
+  src: url("../fonts/AvenirNextCyrLight.eot");
+  src: url("../fonts/AvenirNextCyrLight.eot") format('embedded-opentype'), 
+  url("../fonts/AvenirNextCyrLight.woff2") format('woff2'), 
+  url("../fonts/AvenirNextCyrLight.woff") format('woff');
+  //url("../fonts/AvenirNextCyrLight.ttf") format('truetype'), 
+  //url("../fonts/AvenirNextCyrLight.svg#AvenirNextCyrLight") format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AvenirNextCyr';
+  src: url("../fonts/AvenirNextCyrBold.eot");
+  src: url("../fonts/AvenirNextCyrBold.eot") format('embedded-opentype'), 
+  url("../fonts/AvenirNextCyrBold.woff2") format('woff2'), 
+  url("../fonts/AvenirNextCyrBold.woff") format('woff');
+  //url("../fonts/AvenirNextCyrBold.ttf") format('truetype'), 
+  //url("../fonts/AvenirNextCyrBold.svg#AvenirNextCyrBold") format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+
+$breakpoints: (
+  'xs-phone': 320px,
+  'phone': 480px,
+  'tablet': 768px,
+  'desktop': 1024px,
+  'widescreen': 1200px
+);
+
+// keywords
+$media-expressions: (
+  'screen': 'screen',
+  'print': 'print',
+  'handheld': 'handheld',
+  'landscape': '(orientation: landscape)',
+  'portrait': '(orientation: portrait)',
+  'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
+  'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
+);
+
+// ligatured operators ≥ ≤
+
+@import 'vendors/include-media';
+@import 'vendors/normalize';
+@import 'vendors/animation';
+
+@import 'base/variables';
+@import 'base/functions';
+@import 'base/mixins';
+@import 'base/helpers';
+@import 'base/reset';
+@import 'base/typography';
+@import 'base/forms';
+
+@import 'layout/base';
+@import 'layout/intro';
+// @import 'layout/description';
+@import 'layout/benefits';
+@import 'layout/footer';
+
+@import 'components/subscribe';
+@import 'components/tabs';
+@import 'components/dots';
+
+
